@@ -4,8 +4,12 @@ import java.lang.Math;
  * number of each bill. */
 
 public class ChangeCalculator {
-	
+	/**
+	 *  @author levan
+	 *  */
 	public static void main(String[] args) {
+		
+		
 		
 		double amountEntered; // This will represent the amount the user enters
 		
@@ -27,23 +31,16 @@ public class ChangeCalculator {
 		
 		double rem1; //The first reminder.
 		
-		double rem2; //The first reminder.
+		double rem2; //The second reminder.
 		
-		double rem3; //The first reminder.
+		double rem3; //The third reminder.
 		
-		double rem4;
+		double rem4; //The fourth reminder.
 		
-		double rem5;
+		double rem5; //The fifth reminder.
 
-		double rem6;
+		double rem6; //The sixth reminder.
 		
-		double rem7;
-		
-		double rem8;
-		
-		double rem9;
-		
-		double rem10;
 		
 		System.out.println("Amount $"); //Asking the user for an amount 
 		
@@ -61,45 +58,50 @@ public class ChangeCalculator {
 		
 		 amountEntered2 = (int)Math.round(rem1) /10; // Divides the reminder by 10 to display $10 bills
 		 
-		 rem2 = rem1 %10; // The reminder of rem1
+		 rem2 = rem1 %10; //  After taking away the $10 bills this will represent the $5 bills
 		
         System.out.println(amountEntered2 + " ten dollar bills"); // Displays the amount of $10 bills
         
         amountEntered3 = (int)Math.round(rem2) /5; // Divides the reminder by  to display $5 bills
         
-        rem3 = rem2 %5; // The reminder of rem2
+        rem3 = rem2 %5; // After taking away the $5 bills this will represent the $1 bills
         
         System.out.println( amountEntered3 + " five dollar bills"); // Displays the amount of $5 bills
         
         amountEntered4 = (int)Math.round(rem3) /1; // Divides the reminder by  to display $1 bills
         
-        rem4 = rem3 %5; // The reminder of rem3
+        rem4 = rem3 %5; // The reminder of rem3 //After taking away the $1 bills this will represent the change
         
-        System.out.println( amountEntered4 + " one dollar bills"); // Displays the amount of $1 bills
-		
-        amountEntered5 = (int)Math.round(rem4); // Divides the reminder by  to display $1 bills
+        System.out.println( amountEntered4 + " one dollar bills"); // Displays the amount of $1 bills		
         
-        (rem5*100/25) = rem4%1;   //The reminder of rem3
+        amountEntered5 = (int)((rem4%1)*100) /25;    // Divides the reminder by  to display quarters
 		
-		System.out.println(amountEntered5 +" quarters");
+		System.out.println( amountEntered5 +" quarters"); //Displays the number of quarters
 		
-		System.out.println(rem4);
 		
-		System.out.println(rem5);
+		if ((rem4%1) <= .50) {  //this logic is used to determine how many quarters are left over if .50cents left it will minus .25
+			rem5 = (rem4%1) - .25;
+			}
+		if ((rem4%1) >= .25) {  //if it is .25  or more left over -.25
+			rem5 = (rem4%1) - .25;
+			} else {                // if none of the conditions are met we are going to pass the value through
+				rem5 =(rem4%1);
+			}
 		
-		System.out.println("dimes");
+		amountEntered6 = (int)(rem5*100) /10; // This is used to determine the number of dimes.
 		
-		System.out.println("nickels");
+		System.out.println(amountEntered6 + " dimes"); //Displays the amount of dimes
 		
-		System.out.println("pennies");
+		rem6 = (Math.round(rem5 *100)-10); //Used this formula to convert .18 to 8 to break it down to shown nickels and pennies
 		
-	// this will minus the twenties  to determine how many we need.
-	// this will minus the tens   to determine how many we need.
-	// this will minus the fives   to determine how many we need.
-	// this will minus the ones  to determine how many we need.
-	// this will minus the quarters  to determine how many we need.
-	// this will minus the dimes  to determine how many we need.
-	// this will minus the nickels  to determine how many we need.
-	// this will minus the pennies  to determine how many we need.
+	    amountEntered7 = (int)rem6/5; //Using the division operation to take out the number of nickels
+		
+	    System.out.println(amountEntered7 + " nickels");  // displays the number of pennies
+	    
+	    amountEntered8 = (int)rem6 -5; // the number of pennies
+	    
+		System.out.println(amountEntered8 + " pennies");  // displays the number of pennies
+		
+		input.close();
 	}
 }
