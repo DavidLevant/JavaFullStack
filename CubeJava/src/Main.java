@@ -3,6 +3,10 @@ import java.util.Scanner;
  * This main method will call on the methods surface area and volume
  * */
 public class Main {
+	
+	/**
+	 * @param tm is the user input
+	 * */
 	public static void main(String[] args) {
 		
 		

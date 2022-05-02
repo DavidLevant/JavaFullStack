@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Cube {
 	
-	 double sideLength; // The length of one side
+	    double sideLength; // The length of one side
 	 
     	public Cube(double sideLength) {  //The constructor for cube.
 		this.sideLength = sideLength;
