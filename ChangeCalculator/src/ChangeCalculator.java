@@ -5,7 +5,20 @@ import java.lang.Math;
 
 public class ChangeCalculator {
 	/**
-	 *  @author levan
+	 *  @author Levant
+	 *  
+	 *  @param amountEntered is the amount the user entered
+	 *  @param amountEntered1 is the amount the user entered
+	 *  @param amountEntered2 is the amount the user entered
+	 *  @param amountEntered3 is the amount the user entered
+	 *  @param amountEntered4 is the amount the user entered
+	 *  @param amountEntered5 is the amount the user entered
+	 *  @param rem1 is the reminding amount after performing the operation
+	 *  @param rem2 is the reminding amount after performing the operation
+	 *  @param rem3 is the reminding amount after performing the operation
+	 *  @param rem4 is the reminding amount after performing the operation
+	 *  @param rem5 is the reminding amount after performing the operation
+	 *  @param rem6 is the reminding amount after performing the operation
 	 *  */
 	public static void main(String[] args) {
 		
