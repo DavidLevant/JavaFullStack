@@ -1,3 +1,10 @@
+/**
+ * @author David Levant
+ * This program will generate a collection of music 
+ * */
+
+
+
 package Music;
 import Music.Album;
 import Music.Song;
@@ -43,7 +50,13 @@ public class MusicCollection {
 		tm = input.nextInt();
 		input.nextLine();
 		
-		
+		/**
+		 *  @param album3 This is the first album in the collection
+		 *  @param album4 This is the second album in the collection
+		 *  @param album5 This is the third album in the collection
+		 *  @param album6 This is the fourth album in the collection
+		 * 
+		 * */
 		
 		if (tm  == 1){
 			albumOptions(album3);
@@ -65,19 +78,19 @@ public class MusicCollection {
 }
 	//add if statement 
 		
-		
+		/**
+		 * @param album is using the album object from the Album class
+		 * */
 	
 }
 	public static void  albumOptions(Album album) {
 		    int vm =4;
 		    
 	     	Scanner input1 = new Scanner(System.in);
-			System.out.println("Hello");
 			System.out.println(album.toString());
 			System.out.println(album.getGenre());
 			
-			//give the user options 
-			//go back to the first while loop
+			
 			
 			   
 				
@@ -90,7 +103,9 @@ public class MusicCollection {
 				vm = input1.nextInt();
 				input1.nextLine();
 				
-				
+				/**
+				 * @param genre is the genre variable from the Album class
+				 * */
 				if (vm  == 1){
 					System.out.println("I work" + album.getFavoriteTrack());
 				}
@@ -99,10 +114,10 @@ public class MusicCollection {
 					
 					String genre;
 					
-					Scanner vn = new Scanner(System.in);
-					genre = vn.nextLine();
-					album.setGenre(genre);
-					System.out.println(album.getGenre());
+					Scanner vn = new Scanner(System.in); // new scanner
+					genre = vn.nextLine(); //asks the user to set the genre variable
+					album.setGenre(genre); //sets the genre to the info the user entered
+					System.out.println(album.getGenre()); //printing out the getGenre method in the album class
 					
 					//scanner input
 					//album.setGenre(genre);
