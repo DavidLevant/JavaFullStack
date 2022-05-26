@@ -1,0 +1,41 @@
+
+.mainHead{
+    text-align: center;
+    color: brown;
+}
+
+.mainBox{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;  
+    margin-left: 750px;
+}
+
+.spc{
+    margin: 10px;
+    padding-right: 5px;
+
+}
+.nameBox{
+    float: left;
+    padding-right: 15px;
+}
+.textBox{
+    margin-left: 5px;
+}
+
+.secondBox{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black; 
+    margin-top: 20px; 
+    margin-left: 750px;
+}
+
+#btnPrimary{
+    margin-top: 25px;
+    margin-left: 150px;
+}
+#secondHeader{
+ margin-left: 100px;
+}
